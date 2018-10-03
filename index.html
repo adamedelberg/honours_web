@@ -1,237 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Evaluating SQL vs. NoSQL for semi-structured data</title>
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+        <title>Evaluating SQL vs. NoSQL for semi-structured data</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link href="css/bootstrap.techie.css" rel="stylesheet">
+        <link href="css/bootstrap.custom.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/bootstrap.techie.css" rel="stylesheet">
-    <link href="css/bootstrap.custom.css" rel="stylesheet">
+    </head>
 
-</head>
+    <body id="body">
+        <!-- Navigation-bar -->
+        <nav  class="jumbotron navbar navbar-inverse navbar-expand-lg navbar-light fixed-top" >
+            <div id="nav1" class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">      </a>
 
-<body id="body">
-    <!-- Navigation-bar -->
-    <nav  class="jumbotron navbar navbar-inverse navbar-expand-lg navbar-light fixed-top" >
-        <div id="nav1" class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">      </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  Menu <i class="fas fa-bars"></i></button>
 
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              Menu <i class="fas fa-bars"></i></button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <div class="navbar-nav">
-                    <a href="#menu-toggle" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Menu</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Home</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Context and Background </a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Project Goals</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Experiments</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Results </a>&nbsp;
-                    <a href="downloads.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Downloads</a>&nbsp;
-                    <a href="about.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">About</a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="navbar-nav">
+                        <a href="#menu-toggle" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Menu</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Home</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Context and Background </a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Project Goals</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Experiments</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Results </a>&nbsp;
+                        <a href="downloads.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Downloads</a>&nbsp;
+                        <a href="about.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">About</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- /#Navigation-bar-wrapper -->
+        </nav>
+        <!-- /#Navigation-bar-wrapper -->
 
-    <div id="wrapper">
-     <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#">Home</a></li>
-                <li><a href="#">Overview</a></li> 
-                <li><a href="#">Experiments</a></li>
-                <li><a href="#">MongoDB</a></li>
-                <li><a href="#">Apache Cassandra</a></li>
-                <li><a href="#">MySQL</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Downloads</a></li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <div class="pagetitle">
-            <h1>Evaluating SQL vs. NoSQL for semi-structured data</h1>
-            <p>WhyNoSQL Project: Big Data. Semi-structured data. Experimenting. Performance metrics. Databases. NoSQL.</p>
-        </div>
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-
-            <div class="container-fluid">
-                <h3 >Context and Background </h4> 
-                <hr>
-
-                <section id="section-services" class="section pad-bot30 bg-white">
-                    <div class="container">
-
-                      <div class="row">
-
-                        <div class="col-md-6 col-md-4 col-lg-4">
-                          <div class="align-center"> 
-                            <h4 class="text-bold">Relational vs NoSQL Databases</h4>
-                            <p> Relational or Structured Query Language (SQL) databases have long been the preferred and default choice for new database management system (DBMS) deployments.
-                                But for certain types of data they are not always most efficient. Typically NoSQL databases are faster than relational databases, but this dependant on dataset and implementation.</p>
-                          </div>
-                        </div>
-
-                        <div class="col-md-6 col-md-4 col-lg-4">
-                          <div class="align-center"> 
-                            <h4 class="text-bold">Big Data and Semi-Structured Data</h4>
-                            <p> With the rise of Big Data and Web 2.0 applications, there are different types of data with various structures that need to be operated on whilst observing the three V’s of Big Data.
-                                We are focussed on the performance of databases on semi-structured data and datasets that comprise sparse and varied elements.</p>
-                            <figure>Figure 1 - three v’s big data</figure>
-
-                          </div>
-                        </div>
-
-                        <div class="col-md-6 col-md-4 col-lg-4">
-                          <div class="align-center"> 
-                            <h4 class="text-bold">Validating Performance Claims</h4>
-                            <p>To validate the claims of NoSQL with clustering, we implemented query operations, two NoSQL databases, MongoDB and Cassandra, and a relational database, MySQL, in various cluster configurations and evaluated performance for each DBMS design and configuration to capture elapsed metrics.​</p>
-                          </div>
-                        </div>
-
-                      </div>
-
-                    </div>
-                </section>
-        
-                <h3>Project Goals</h3> <hr>
-                <div>
-                    <p> Our project goals were to implement three database designs. Two of these designs were NoSQL implementations and additionally a relational database was implements for comparison. 
-                        These designs supported Twitter datasets which comprised of a semi-structured data with multiple missing elements and varying document lengths.
-                        Our intention was to then test performance for each of these database designs in various configurations and schema definitions to document the most performant design for our semi-structured dataset, one that is both generic and representative of similar big data scenarios.</p>
-                </div>
-
-                <h3>Experiments</h3> <hr>
-                <div>
-                    <p> We conducted experimentation in a uniform computing environment where each node used identical commodity hardware and was only hosting the database instance itself.
-                        We designed tests to benchmark the read and write performance of the database candidates for each cluster design or configuration.
-
-                    <p> <b>Five query operations to be executed on the databases were implemented:</b></p> 
-                    <ul class="">
-                        <li>Bulk-insertions - loading a whole dataset</li>
-                        <li>Single-insertions - single record insert</li>
-                        <li>Indexed-inserts -  single record insert into indexed data model</li>
-                        <li>indexed-selects - retrieving data from indexed data model</li>
-                        <li>Scanning - scanning whole database</li>
-                    </ul>
-                    <p>
-                </div> 
-
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<header class="bg-primary text-white">
-    <div class="container text-center">
-        <h1>Welcome to Scrolling Nav</h1>
-        <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
-    </div>
-</header>
-
-<section id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>About this page</h2>
-                <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-                <ul>
-                    <li>Clickable nav links that smooth scroll to page sections</li>
-                    <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                    <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                    <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+        <div id="wrapper">
+         <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand"><a href="#">Home</a></li>
+                    <li><a href="#">Overview</a></li> 
+                    <li><a href="#">Experiments</a></li>
+                    <li><a href="#">MongoDB</a></li>
+                    <li><a href="#">Apache Cassandra</a></li>
+                    <li><a href="#">MySQL</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Downloads</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-</section>
-
-<section id="services" class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Services we offer</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Contact us</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+            <!-- /#sidebar-wrapper -->
+            <div class="pagetitle">
+                <h1>Evaluating SQL vs. NoSQL for Semi-structured Data</h1>
+                <p><i>"WhyNoSQL Project:  Big Data. Semi-structured data. Experimenting. Performance Benchmarking Metrics. Databases. NoSQL"</i></p>
             </div>
 
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+
+                <div class="container-fluid">
+                    <h3 style="text-align: center;">Context and Background </h3> 
+                    <hr>
+
+                    <section id="section-services" class="section pad-bot30 bg-white">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-md-6 col-md-4 col-lg-4 box">
+                                  <div class="align-center"> 
+                                    <h5 class="text-bold">Relational vs NoSQL Databases</h5>
+                                    <p> Relational or Structured Query Language (SQL) databases have long been the preferred and default choice for new database management system (DBMS) deployments.
+                                        But for certain types of data they are not always most efficient. Typically NoSQL databases are faster than relational databases, but this dependant on dataset and implementation.</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6 col-md-4 col-lg-4 box">
+                                  <div class="align-center"> 
+                                    <h5 class="text-bold">Big Data and Semi-Structured Data</h5>
+                                    <p> With the rise of Big Data and Web 2.0 applications, there are different types of data with various structures that need to be operated on whilst observing the three V’s of Big Data.
+                                        We are focussed on the performance of databases on semi-structured data and datasets that comprise sparse and varied elements.</p>
+                                    <figure style="text-align: center;">Figure 1 - three v’s big data</figure>
+
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6 col-md-4 col-lg-4 box">
+                                  <div class="align-center"> 
+                                    <h5 class="text-bold">Validating Performance Claims</h5>
+                                    <p>To validate the claims of NoSQL with clustering, we implemented query operations, two NoSQL databases, MongoDB and Cassandra, and a relational database, MySQL, in various cluster configurations and evaluated performance for each DBMS design and configuration to capture elapsed metrics.​</p>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                    </section>
+            
+                    <h3>Project Goals</h3> <hr>
+                    <div>
+                        <p> Our project goals were to implement three database designs. Two of these designs were NoSQL implementations and additionally a relational database was implements for comparison. 
+                            These designs supported Twitter datasets which comprised of a semi-structured data with multiple missing elements and varying document lengths.
+                            Our intention was to then test performance for each of these database designs in various configurations and schema definitions to document the most performant design for our semi-structured dataset, one that is both generic and representative of similar big data scenarios.</p>
+                    </div>
+
+                    <h3>Experiments</h3> <hr>
+                    <div>
+                        <p> We conducted experimentation in a uniform computing environment where each node used identical commodity hardware and was only hosting the database instance itself.
+                            We designed tests to benchmark the read and write performance of the database candidates for each cluster design or configuration.</p>
+
+                        <p> <b>Five query operations to be executed on the databases were implemented:</b> </p> 
+                        <ul class="list"> 
+                            <li>Bulk-insertions - loading a whole dataset</li>
+                            <li>Single-insertions - single record insert</li>
+                            <li>Indexed-inserts -  single record insert into indexed data model</li>
+                            <li>indexed-selects - retrieving data from indexed data model</li>
+                            <li>Scanning - scanning whole database</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
 
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-    </div>
+        <!-- Footer -->
+        <footer>
+            <footer class="container-fluid text-center">
+                <p>UCT Computer Science Honours © 2018</p>
+            </footer>
 
-    <footer class="container-fluid text-center">
-        <p>UCT Computer Science Honours © 2018</p>
-    </footer>
+            <!-- /#wrapper -->
 
-    <!-- /#wrapper -->
+            <!-- /.container -->
+        </footer>
 
-    <!-- /.container -->
-</footer>
+        <link href="css/scrolling-nav.css" rel="stylesheet">
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom JavaScript for this theme -->
+        <script src="js/scrolling-nav.js"></script>
 
-<!-- Custom JavaScript for this theme -->
-<script src="js/scrolling-nav.js"></script>
-
-</body>
+    </body>
 
 </html>
