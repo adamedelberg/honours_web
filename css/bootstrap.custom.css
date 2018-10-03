@@ -1,0 +1,51 @@
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+	text-align: center;
+	align-content: center;
+    display: flex; 
+} 
+
+.navbar-inverse {
+    border-color: #010809;
+}
+
+.landing-page .section-demo {
+    margin-top: 50px;
+}
+ 
+.section {
+    padding: 30px 0;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.jumbotron {
+	padding:1rem 1rem;
+	margin-bottom:2rem;
+	border-radius:.3rem;
+	background-color: rgb(229, 227, 223);
+	background-color:#e9ecef;
+	background-color: #eeeeee;
+}
+
+footer {
+    background: lightgrey; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 1rem;
+ 	font-family: 'Lato', sans-serif;
+}
+ 
+.pagetitle {
+	text-align: center;
+	
+}
+
+address { 
+    display: block;
+    font-style: italic;
+}
