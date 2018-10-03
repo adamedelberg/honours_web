@@ -1,116 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Evaluating SQL vs. NoSQL for semi-structured data</title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <title>Evaluating SQL vs. NoSQL for semi-structured data</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/bootstrap.techie.css" rel="stylesheet">
-    <link href="css/bootstrap.custom.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link href="css/bootstrap.techie.css" rel="stylesheet">
+        <link href="css/bootstrap.custom.css" rel="stylesheet">
+    </head>
 
-</head>
+    <body id="body">
+        <!-- Navigation-bar -->
+        <nav  class="jumbotron navbar navbar-inverse navbar-expand-lg navbar-light fixed-top" >
+            <div id="nav1" class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">      </a>
 
-<body id="body">
-    <!-- Navigation-bar -->
-    <nav  class="jumbotron navbar navbar-inverse navbar-expand-lg navbar-light fixed-top" >
-        <div id="nav1" class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">      </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  Menu <i class="fas fa-bars"></i></button>
 
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              Menu <i class="fas fa-bars"></i></button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <div class="navbar-nav">
-                    <a href="#menu-toggle" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Menu</a>&nbsp;
-                    <a href="index.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Home</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Context and Background </a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Project Goals</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Experiments</a>&nbsp;
-                    <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Results </a>&nbsp;
-                    <a href="downloads.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Downloads</a>&nbsp;
-                    <a href="about.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">About</a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="navbar-nav">
+                        <a href="#menu-toggle" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Menu</a>&nbsp;
+                        <a href="index.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Home</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Context and Background </a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Project Goals</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Experiments</a>&nbsp;
+                        <a href="#" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Results </a>&nbsp;
+                        <a href="downloads.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">Downloads</a>&nbsp;
+                        <a href="about.html" class="btn btn-secondary  nav-item js-scroll-trigger" id="menu-toggle">About</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- /#Navigation-bar-wrapper -->
+        </nav>
+        <!-- /#Navigation-bar-wrapper -->
 
-    <div id="wrapper">
-     <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#">Home</a></li>
-                <li><a href="#">Overview</a></li> 
-                <li><a href="#">Experiments</a></li>
-                <li><a href="#">MongoDB</a></li>
-                <li><a href="#">Apache Cassandra</a></li>
-                <li><a href="#">MySQL</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Downloads</a></li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <div class="pagetitle">
-            <h1>About Project</h1>
-            <p>Information about the project and team.</p>
-        </div>
+        <div id="wrapper">
+         <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand"><a href="#">Home</a></li>
+                    <li><a href="#">Overview</a></li> 
+                    <li><a href="#">Experiments</a></li>
+                    <li><a href="#">MongoDB</a></li>
+                    <li><a href="#">Apache Cassandra</a></li>
+                    <li><a href="#">MySQL</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+            <div class="pagetitle">
+                <h1>About Project</h1>
+                <p>Information about the project and team.</p>
+            </div>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
 
-            <section id="section-services" class="section pad-bot30 bg-white">
-                <div class="container"> 
-                    <div>
-                        <h4>About</h4> <hr>
-                        <address>
-                            Supervisor: Prof. Sonia Berman (email: <a href="mailto:sonia@cs.uct.ac.za">sonia@cs.uct.ac.za)</a>
-                            <br>
-                            Second Reader: Prof. Aslam Safla (email: <a href="mailto:aslam@cs.uct.ac.za">aslam@cs.uct.ac.za)</a>
-                        </address> 
+                <section id="section-services" class="section pad-bot30 bg-white">
+                    <div class="container">
+                        
+                        <div>
+                            <h4>About</h4> <hr>
+                            <address>
+                                Supervisor: 
+                                <br>
+                                Prof. Sonia Berman (email: <a href="mailto:sonia@cs.uct.ac.za">sonia@cs.uct.ac.za)</a>
+                                <br><br>
+                                Second Reader: 
+                                <br>
+                                Dr. Aslam Safla (email: <a href="mailto:aslam@cs.uct.ac.za">aslam@cs.uct.ac.za)</a>
+                            </address> 
+                        </div>
+        
+                        <div>
+                            <h4>Research Team</h4> <hr>
+                            <address>
+                                Adam Edelberg (email: <a href="mailto:edlada002@myuct.ac.za">edlada002@myuct.ac.za)</a>
+                                <br>
+                                Masixole Ntshinga  (email: <a href="mailto:ntsmat016@myuct.ac.za">ntsmat016@myuct.ac.za)</a>
+                            </address>
+                        </div>
+                         
                     </div>
-    
-                    <div>
-                        <h4>Research Team</h4> <hr>
-                        <address>
-                            Adam Edelberg (email: <a href="mailto:edlada002@myuct.ac.za">edlada002@myuct.ac.za)</a>
-                            <br>
-                            Masixole Ntshinga  (email: <a href="mailto:ntsmat016@myuct.ac.za">ntsmat016@myuct.ac.za)</a>
-                        </address>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            <!-- /#page-content-wrapper -->
+
         </div>
-        <!-- /#page-content-wrapper -->
 
-    </div>
+        <footer class="container-fluid text-center">
+            <p>UCT Computer Science Honours © 2018</p>
+        </footer>
 
-    <footer class="container-fluid text-center">
-        <p>UCT Computer Science Honours © 2018</p>
-    </footer>
+        <!-- /#wrapper -->
 
-    <!-- /#wrapper -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Menu Toggle Script -->
+        <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
-</body>
+    </body>
 
 </html>
