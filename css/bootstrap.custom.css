@@ -1,10 +1,5 @@
 .navbar {
     position: relative;
-    min-height: 50px;
-    margin-bottom: 20px;
-	text-align: center;
-	align-content: center;
-    display: flex; 
 } 
 
 .navbar-inverse {
@@ -14,38 +9,95 @@
 .landing-page .section-demo {
     margin-top: 50px;
 }
- 
+
 .section {
     padding: 30px 0;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; 
 }
 
 .jumbotron {
-	padding:1rem 1rem;
+    color: inherit;
+    padding:1rem 1rem;
 	margin-bottom:2rem;
 	border-radius:.3rem;
 	background-color: rgb(229, 227, 223);
 	background-color:#e9ecef;
 	background-color: #eeeeee;
+    font-size: 80%;
 }
 
-footer {
-    background: lightgrey; 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    padding: 1rem;
- 	font-family: 'Lato', sans-serif;
+#wrapper { 
+    margin-bottom: 50px;
+    clear: both;
+    font-size: 95%;
 }
- 
+
 .pagetitle {
 	text-align: center;
-	
 }
 
 address { 
     display: block;
     font-style: italic;
+}
+
+p {
+    color: #777;
+    display: block; 
+}
+
+h1, .h1 {
+    color: #70B9B0;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1; 
+}
+
+h2, h3, h4, h5, .h2, .h3, .h4, .h5, .address, figure {
+    color: #70B9B0;
+    color: #777;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1; 
+}
+
+h6, .h6 {
+    color: #777; 
+}
+
+.list {
+    color: #777;
+}
+
+.box {
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    margin: 0px;
+    display: inline-block; 
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+ 
+/* Scale up the box */
+.box:hover {
+  transform: scale(1.2, 1.2);
+  z-index: 1 !important;
+}
+
+/* Fade in the pseudo-element with the bigger shadow */
+.box:hover:after {
+  opacity: 1;
+
+}
+
+footer {
+    position: relative;    
+    bottom:0px;
+    left:0px;
+    right:0px; 
+    padding: 1rem; 
+    background: lightgrey; 
+    font-family: 'Lato', sans-serif; 
 }
